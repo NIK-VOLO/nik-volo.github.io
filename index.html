@@ -1,13 +1,120 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="utf-8" name="viewport" content="width=device-width">
-  <title>FanpadWebPrototype</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link rel="stylesheet" href="styles.d7fb65313191becc.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.d7fb65313191becc.css"></noscript></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanpad</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <body>
-  <app-root></app-root>
-<script src="runtime.e9efd63336d03069.js" type="module"></script><script src="polyfills.2ed0d5ec3626b5c2.js" type="module"></script><script src="main.7826ed8f4eff9b37.js" type="module"></script>
+    <main>
+        <header>
+            <div class="primary-header flex">
+                <span class="header-logo">
+                    <p>fan<b>pad</b></p>
+                </span>
+                <nav>
+                    <span class="primary-navigation">
+                        <button>LOGIN</button>
+                        <img src="./img/bars-solid.svg">
+                    </span>
+                </nav>
+            </div>
 
-</body></html>
+            <div visible="false" class="nav-menu">
+                <div class="row">
+                    <a href="https://www.google.com">LOGIN</a>
+                </div>
+            </div>
+        </header>
+       <div class="bg">
+        <section class="sec-main">
+            <div class="container">
+              <div class="logo text-center">
+                  <img src="./img/logo-white.svg" alt="logo" width="150px"/>
+                  
+               </div>
+               <div class="div-live">
+                   <span class="span-live"><i>Helping artists connect with their superfans</i></span>
+               </div>
+               <div class="row d-flex justify-content-center">
+                   <div class="col-6 d-flex justify-content-center">
+                       <div class="buttons"><a href="btn" class="btn btn1">Request Beta Access</a></div>
+                   </div>
+                   <!-- <div class="col-6 d-flex justify-content-center">
+                      <div class="buttons"><a href="btn" class="btn btn2">Get Updates</a></div>
+                  </div> -->
+               </div>
+               <!-- <div class="row d-flex justify-content-center">
+                   <div class="col-10 col-lg-4 col-md-4">
+                       <div class="outerbox">
+                          <h5 class="text-center">Own Your Audience</h5>
+                              <p class="text-center">Directly message them anytime, anywhere with
+                                    4X+ more effectiveness.</p>
+                       </div>
+                   </div>
+                   <div class="col-10 col-lg-4 col-md-4">
+                      <div class="outerbox">
+                          
+                             <h5 class="text-center">Genuine, Deeper Engagement</h5>
+                             <p class="text-center">Build a community with your playbooks and
+                                    your content.</p>
+                      </div>
+                  </div>
+                  <div class="col-10 col-lg-4 col-md-4">
+                      <div class="outerbox">
+                         
+                              <h5 class="text-center">Monetize In New Ways</h5>
+                              <p class="text-center">Leverage revolutionary tools to get paid giving
+                                    the fans what they want.</p>
+                      </div>
+                  </div>
+               </div> -->
+            </div>
+            
+          </section>
+       </div>
+       <div>
+           <section class="sec-info">
+                <h2>How it Works</h2>
+                <div class="info-box">
+                    <fieldset>
+                        <legend><span>
+                            <h3>Own Your Audience</h3>
+                        </span></legend>
+                        <p>Directly message them anytime, anywhere with 4x+ more effectiveness.</p>
+                    </fieldset>
+                </div>
+                <div class="info-box">
+                    <fieldset>
+                        <legend><span>
+                                <h3>Genuine, Deeper Engagement</h3>
+                            </span></legend>
+                        <p>Build a community with your playbooks and your content.</p>
+                    </fieldset>
+                </div>
+                <div class="info-box">
+                    <fieldset>
+                        <legend><span>
+                                <h3>Monetize in New Ways</h3>
+                            </span></legend>
+                        <p>Leverage revolutionary tools to get paid giving the fans what they want.</p>
+                    </fieldset>
+                </div>
+           </section>
+       </div>
+
+        <footer class="footer">
+            <p><span class="pl-3 pr-4"><a href="">Terms and Conditions</a></span><span class="pl-3 pr-4"><a href="">Privacy
+                        Policy</a></span><span class="pl-3 pr-4"><a href=""><img src="./img/twitter.svg"
+                            width="26px" /></a></span></p>
+            <p class="footer-copyright">© FanPad 2022</p>
+        </footer>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
