@@ -354,12 +354,20 @@ header.active nav img {
     justify-content: center;
     max-width: 50ch;
     margin: 3em auto;
+    text-align: center;
     /* padding: 0 20px 0 10px; */
+    /* background: linear-gradient(128deg, rgba(5, 4, 77, 1) 6%, rgba(9, 9, 121, 1) 20%, rgba(0, 112, 255, 1) 100%); */
+    /* color: transparent */
 }
 
 
 .info-box fieldset {
-    border: 1px solid black;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 3px;
+    /* border-image-source: linear-gradient(128deg, rgba(5, 4, 77, 1) 6%, rgba(9, 9, 121, 1) 20%, rgba(0, 112, 255, 1) 100%); */
+    /* background: rgb(5,4,77);
+background: linear-gradient(128deg, rgba(5,4,77,1) 6%, rgba(9,9,121,1) 20%, rgba(0,112,255,1) 100%); */
     min-width: 300px;
     width: fit-content;
     text-align: center;
@@ -369,17 +377,52 @@ header.active nav img {
 .info-box fieldset p {
     font-size: 1.2rem;
     margin: 1em 2em 1em 2em;
+    color: black;
 }
 
 .info-box fieldset legend {
     /* width: 500px; */
     width: 90%;
-    margin: 0;
+    margin: auto;
 }
 
 .info-box fieldset legend h3 {
     font-weight: bold;
     margin: 0;
+}
+
+.box-gradient-1 fieldset {
+    /* background: linear-gradient(128deg, rgba(5, 4, 77, 1) 6%, rgba(9, 9, 121, 1) 20%, rgba(0, 112, 255, 1) 100%); */
+    border-image-source: linear-gradient(128deg, rgba(5, 4, 77, 1) 6%, rgba(9, 9, 121, 1) 20%, rgba(0, 112, 255, 1) 100%);
+}
+
+.text-gradient-1 {
+    background: linear-gradient(128deg, rgba(5, 4, 77, 1) 6%, rgba(9, 9, 121, 1) 20%, rgba(0, 112, 255, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.box-gradient-2 fieldset {
+    border-image-source: linear-gradient(304deg, rgba(5, 4, 77, 1) 6%, rgba(9, 9, 121, 1) 20%, rgba(0, 112, 255, 1) 100%);
+}
+
+.text-gradient-2 {
+    background: linear-gradient(304deg, rgba(5, 4, 77, 1) 6%, rgba(9, 9, 121, 1) 20%, rgba(0, 112, 255, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.box-gradient-3 fieldset {
+    border-image-source: linear-gradient(23deg, rgba(5, 4, 77, 1) 6%, rgba(9, 9, 121, 1) 20%, rgba(0, 112, 255, 1) 100%);
+}
+
+.text-gradient-3 {
+    background: linear-gradient(23deg, rgba(5, 4, 77, 1) 6%, rgba(9, 9, 121, 1) 20%, rgba(0, 112, 255, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
