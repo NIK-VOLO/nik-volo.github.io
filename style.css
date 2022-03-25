@@ -59,6 +59,10 @@ h6 {
     gap: var(--gap, 1rem);
 }
 
+.center {
+    margin: auto;
+}
+
 .bg {
     /* background-image: linear-gradient(skyblue, blue); */
     /* background-image: linear-gradient(47.1deg, #06064C,#0F62D6,#66E8FF,#66E8FF,#1DC2E5); */
@@ -87,17 +91,16 @@ h6 {
 }
 
 .header-logo {
-    margin: 1rem auto auto 2rem;
+    /* margin: 1rem auto auto 2rem; */
+    margin-left: 2rem;
 }
 
-.header-logo p,
-b {
+.header-logo img {
     display: none;
-    font-family: "Circular-Abstracts";
+    width: 100px;
 }
 
-header.active .header-logo p,
-b {
+header.active .header-logo img {
     display: inline-block;
 }
 
@@ -144,6 +147,10 @@ nav button {
     font-weight: 800;
 }
 
+nav button:hover {
+    color: black;
+}
+
 nav img {
     /* color: rgb(204, 204, 204); */
     margin: 0.5em 2em 0.5em 1em;
@@ -161,6 +168,9 @@ header.active nav img {
 }
 
 .nav-menu {
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
     transition: 200ms ease-in-out;
     opacity: 0;
     transform: translateX(100%);
@@ -179,7 +189,7 @@ header.active nav img {
 
 .nav-menu a {
     /* background-color: transparent; */
-    color:black;
+    color: black;
     border: none;
     font-weight: bold;
     padding: 1em;
@@ -191,6 +201,49 @@ header.active nav img {
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50px);
+}
+
+.request-form-container {
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    transform: translate(100%);
+    opacity: 0;
+}
+
+.request-form-container[visible='true'] {
+    transition: 250ms ease-in-out;
+    display: block;
+    transform: translateY(0%);
+    opacity: 100;
+}
+
+.request-form {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    height: 90vh;
+    background-color: white !important;
+    border-radius: 15px;
+    padding-top: 4rem;
+}
+
+
+.close-form {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.request-form iframe {
+    width: 100%;
+    height: 100%;
 }
 
 .div-live {
@@ -225,6 +278,8 @@ header.active nav img {
 .buttons {
     padding: 5px;
     margin: 20px auto;
+    display: flex;
+    justify-content: center;
 }
 
 .buttons .btn {
@@ -234,7 +289,6 @@ header.active nav img {
     padding: 15px;
     border-radius: 30px;
     font-size: 21px;
-
 }
 
 .buttons .btn1 {
@@ -281,15 +335,16 @@ header.active nav img {
 .sec-info {
     /* min-height: 100vh; */
     height: fit-content;
-    background-image: linear-gradient(180deg, #bee0ff, #ffffff);
+    /* background-image: linear-gradient(180deg, #bee0ff, #ffffff); */
+    background-color: #d8ecff;
     font-size: 16px;
     padding-bottom: 5rem;
 }
 
 .sec-info h2 {
-    padding: 1em;
+    padding: 1em 1em 0 1em;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
@@ -298,7 +353,7 @@ header.active nav img {
     display: flex;
     justify-content: center;
     max-width: 50ch;
-    margin: 2em auto;
+    margin: 3em auto;
     /* padding: 0 20px 0 10px; */
 }
 
@@ -338,7 +393,7 @@ header.active nav img {
     /* margin: 80px auto 10px auto; */
     font-size: 20px;
     width: 100%;
-    padding: 10px 0 10px 0;
+    /* padding: 10px 0 10px 0; */
     background-color: black;
 }
 
@@ -349,7 +404,12 @@ header.active nav img {
 }
 
 .footer p {
-    margin: 1em;
+    margin: 0;
+    /* padding: 1em 0 .5em 0; */
+}
+
+.footer-links {
+    padding: 1em 0 1em 0;
 }
 
 .footer-copyright {
@@ -357,6 +417,29 @@ header.active nav img {
     color: white;
     margin-bottom: 0px;
 }
+
+p.footer-copyright {
+    padding-bottom: 0.5em;
+}
+
+/* * * * * * * * * * * * * * *  
+*   ANIMATIONS
+* * * * * * * * * * * * * * */
+
+.rotate {
+    animation: rotation 15s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 /***************************
 #Responsive
@@ -391,13 +474,13 @@ header.active nav img {
     .span-live i,
     .outerbox p,
     .footer p {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .footer span {
         padding: 0;
-        display: flex;
-        justify-content: center;
+        /* display: flex;
+        justify-content: center; */
         margin: 0.5em 0 1em 0;
     }
 
@@ -439,8 +522,9 @@ header.active nav img {
         font-size: 1rem;
     }
 
-    .footer {
-        margin-top: 15px;
+    .footer p {
+        margin-left: 0;
+        margin-right: 0;
     }
 
 
@@ -454,6 +538,15 @@ header.active nav img {
     nav img {
         width: 2em;
         display: block;
+    }
+
+    .request-form {
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        border-radius: 0;
+        padding-top: 4rem;
     }
 }
 
