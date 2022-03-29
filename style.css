@@ -27,6 +27,14 @@ body {
     overflow-x: hidden;
 }
 
+body[scroll-enabled='true'] {
+    overflow-y: auto;
+}
+
+body[scroll-enabled='false'] {
+    overflow-y: hidden;
+}
+
 header {
     position: fixed;
     z-index: 1000;
@@ -362,6 +370,8 @@ header.active nav img {
 
 
 .info-box fieldset {
+    /* display: flex; */
+    position: relative;
     border: 10px solid;
     border-image-slice: 1;
     border-width: 3px;
@@ -371,12 +381,22 @@ background: linear-gradient(128deg, rgba(5,4,77,1) 6%, rgba(9,9,121,1) 20%, rgba
     min-width: 300px;
     width: fit-content;
     text-align: center;
-    margin: 0 20px 0 20px;
+    margin: 0 16px 0 16px;
+}
+
+.info-box img {
+    /* margin: 1em; */
+    position: absolute;
+    top: 50%;
+    left: -30%;
+    width: 25%;
+    transform: translateY(-50%);
 }
 
 .info-box fieldset p {
+    width: fit-content;
     font-size: 1.2rem;
-    margin: 1em 2em 1em 2em;
+    margin: .75em 2em 1em 2em;
     color: black;
 }
 
@@ -484,6 +504,51 @@ p.footer-copyright {
 }
 
 
+.horizontal-scroll {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    width: 98%;
+}
+
+.horizontal-scroll .scroll-text {
+    /* width: min-content; */
+    display: inline-block;
+    /* margin: auto 100px auto 100px; */
+    /* margin: auto; */
+    margin-right: 4em;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.horizontal-scroll.active .scroll-text {
+    /* width: min-content; */
+    display: inline-block;
+    /* margin: auto; */
+    margin-right: .75em;
+    position: relative;
+    top: 0;
+    left: auto;
+    transition: 0s;
+    animation: horizontal-scroll 5s linear infinite;
+}
+
+@keyframes horizontal-scroll {
+    0% {
+        /* transform: translateX(11%); */
+        /* left:50%; */
+        /* transform: translateX(-15.7em); */
+        transform: translateX(-7em);
+    }
+
+    100% {
+        transform: translateX(-194%);
+    }
+}
+
+
 /***************************
 #Responsive
 ***************************/
@@ -558,11 +623,11 @@ p.footer-copyright {
     }
 
     .info-box fieldset legend h3 {
-        font-size: 1em;
+        font-size: 22px;
     }
 
     .info-box fieldset p {
-        font-size: 1rem;
+        font-size: 18px;
     }
 
     .footer p {
@@ -570,6 +635,11 @@ p.footer-copyright {
         margin-right: 0;
     }
 
+    .info-box fieldset p {
+        /* width: fit-content; */
+        /* font-size: 1.2rem; */
+        margin: .5em 2.2em 2em 2.2em !important;
+    }
 
 }
 
@@ -590,6 +660,25 @@ p.footer-copyright {
         background-color: white;
         border-radius: 0;
         padding-top: 4rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    .info-box img {
+        /* margin: 1em; */
+        /* position: absolute; */
+        top: auto;
+        bottom: 8px;
+        left: 8px;
+        width: 10%;
+        transform: translate(0);
+    }
+
+    .info-box fieldset p {
+        width: fit-content;
+        /* font-size: 1.2rem; */
+        margin: .5em 2em 2em 2em;
     }
 }
 
