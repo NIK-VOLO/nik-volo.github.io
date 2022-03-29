@@ -9,8 +9,6 @@ window.onscroll = function(){
 
     if(window.scrollY >= 500){
         info.classList.add('active');
-    }else{
-        info.classList.remove('active');
     }
 }
 
