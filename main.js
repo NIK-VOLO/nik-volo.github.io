@@ -2,7 +2,7 @@ const header = document.querySelector('header');
 var scrolled = false;
 var menuOpen = false;
 
-const info = document.querySelector('.sec-info .horizontal-scroll');
+const info = document.querySelector('.sec-info .animated');
 
 window.onscroll = function(){
     if(window.scrollY >= 250){
@@ -15,9 +15,9 @@ window.onscroll = function(){
         scrolled = false;
     }
 
-    // if(window.scrollY >= 500){
-    //     info.classList.add('active');
-    // }
+    if(window.scrollY >= 500){
+        info.classList.add('active');
+    }
 }
 
 
