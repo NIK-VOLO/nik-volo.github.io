@@ -1,18 +1,26 @@
 const header = document.querySelector('header');
+var scrolled = false;
+var menuOpen = false;
+
+const info = document.querySelector('.sec-info .horizontal-scroll');
 
 window.onscroll = function(){
     if(window.scrollY >= 250){
         header.classList.add('active');
+        scrolled = true;
     }else{
-        header.classList.remove('active');
+        if(!menuOpen){
+            header.classList.remove('active');
+        }
+        scrolled = false;
     }
 
-    if(window.scrollY >= 500){
-        info.classList.add('active');
-    }
+    // if(window.scrollY >= 500){
+    //     info.classList.add('active');
+    // }
 }
 
-const info = document.querySelector('.sec-info .horizontal-scroll');
+
 
 // window.onscroll = function(){
 //     if(window.scrollY >= 500){
@@ -47,6 +55,19 @@ navToggle.addEventListener("click", () => {
     var navIsTrue = (navVisible === 'true');
 
     primaryNav.setAttribute('visible', !navIsTrue);
+    
+    if(!navIsTrue){
+        header.classList.add('active');
+        navToggle.src = "./img/xmark-solid.svg"
+        menuOpen = true;
+    }else{
+        if(!scrolled){
+            header.classList.remove('active');
+        }
+        menuOpen = false;
+        navToggle.src = "./img/bars-solid.svg"
+    }
+    
 })
 
 formOpen.addEventListener("click", () => {
