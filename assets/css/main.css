@@ -4363,7 +4363,7 @@ section *:last-child {
     object-fit: cover;
     height:100%;
     width:100%;
-    display:block;
+    display:block
 }
 
 .curation-banner-logo{
@@ -4387,11 +4387,9 @@ section *:last-child {
     border-radius: 1rem;
     /* padding: .5rem; */
     width: 100%;
-
     /* height: 50%; */
     max-width: 75ch;
     /* aspect-ratio: 1; */
-
     margin: auto;
 }
 
@@ -4431,6 +4429,9 @@ section *:last-child {
 
 .curation-description span {
     color: grey;
+    background-color: #ebf6ff;
+    border-radius: 5px;
+    padding: .25em;
 }
 
 .curation-download{
@@ -4469,7 +4470,11 @@ section *:last-child {
 
 .curation-paragraph{
     padding: 1em;
-    padding-top: 2em;
+    padding-top: 0;
+}
+
+.curation-box-container .curation-paragraph p{
+    font-size: 20px;
 }
 
 .curation-other{
@@ -4482,6 +4487,7 @@ section *:last-child {
 }
 
 .curation-other h3{
+    color: black;
     margin: 1em;
 }
 
@@ -4489,7 +4495,7 @@ section *:last-child {
     width: 100%;
     max-width: 45ch;
     margin: auto;
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
     border-bottom: 2px solid #F1F1F1;
 }
 
@@ -4500,22 +4506,31 @@ section *:last-child {
 }
 
 .curations-grid{
+    width: 80%;
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap:5em;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap:5rem;
     margin:0 auto 5em auto;
 }
 
 .curations-grid h4{
     color: black;
-    margin: 0.5em;
+    margin: 0.5em 0.5em 0.5em 0;
 }
 
 .curations-grid-element{
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 300px);
-    border-bottom: 2px solid #F1F1F1;
+    border-bottom: 2px solid #dfdede;
+}
+
+.curations-grid-element span p{
+    padding-bottom: 20px;
+}
+
+.curations-grid-element .curation-date p{
+    color: grey;
 }
 
 
@@ -6933,7 +6948,6 @@ section *:last-child {
         font-size: 20px;
     }
 
-
     .curation-box-img{
         height: 150px;
     }
@@ -6941,6 +6955,14 @@ section *:last-child {
     .curation-description span {
         color: grey;
         font-size: 18px;
+    }
+
+    .curation-box-container .curation-paragraph p{
+        font-size: 16px;
+    }
+
+    .curations-grid{
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 
 }
