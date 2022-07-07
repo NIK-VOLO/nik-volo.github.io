@@ -1,15 +1,166 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="utf-8" name="viewport" content="width=device-width">
-  <title>FanpadWebPrototype</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <style type="text/css">@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
-  <style type="text/css">@font-face{font-family:'Material Icons';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/materialicons/v130/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');}.material-icons{font-family:'Material Icons';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased;}</style>
-<style>html,body{height:100%}body{margin:0;font-family:Roboto,Helvetica Neue,sans-serif}</style><link rel="stylesheet" href="styles.2b8c9003f255cfcf.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.2b8c9003f255cfcf.css"></noscript></head>
-<body>
-  <app-root></app-root>
-<script src="runtime.1fa530a7c20e1636.js" type="module"></script><script src="polyfills.2ed0d5ec3626b5c2.js" type="module"></script><script src="main.47d3b40c84cd6cae.js" type="module"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      description="FanPad helps artists connect directly with their most passionate fans, providing a suite of tools and playbooks to empower deeper engagement and better monetization."
+    />
+    <title>Fanpad - Privacy Policy</title>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" type="image/jpg" href="favicon.ico" />
+  </head>
+  <body scroll-enabled="true">
+    <main>
+      <div visible="false" class="request-form-container">
+        <div class="request-form">
+          <img
+            class="close-form"
+            src="./img/xmark-solid.svg"
+            alt=""
+            width="25px"
+          />
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfAutJokagD7js5UJV5U4T3Rx0k69p9FPs3IUZwjVlHlIS4Gg/viewform?embedded=true"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            >Loading…</iframe
+          >
+        </div>
+      </div>
+      <header class="main">
+        <div class="primary-header">
+          <span class="header-logo">
+            <img src="./img/logo-black-text.webp" />
+          </span>
+          <nav>
+            <span class="primary-navigation">
+              <!-- TODO: Connect login button to proper destination -->
+              <button>LOGIN</button>
+              <img src="./img/bars-solid.svg" />
+            </span>
+          </nav>
+        </div>
+      </header>
+      <div visible="false" class="nav-menu">
+        <div class="row">
+          <!-- TODO: Connect login button to proper destination -->
+          <a href="https://www.google.com">Login</a>
+        </div>
+      </div>
+      <div class="bg">
+        <section class="sec-main">
+          <div class="container">
+            <div class="logo text-center">
+              <img
+                class="flex center rotate"
+                src="./img/logo-white-image.webp"
+                alt=""
+                width="150px"
+              />
+              <img
+                class="logo flex center"
+                src="./img/logo-white-text.webp"
+                alt=""
+                width="150px"
+              />
+            </div>
 
-</body></html>
+            <div class="div-live">
+              <span class="span-live"
+                ><i>Helping artists connect with their superfans</i></span
+              >
+            </div>
+            <div class="row flex justify-content-center">
+              <div class="col-6 flex justify-content-center">
+                <div class="buttons request-button">
+                  <a class="btn btn1">Request Beta Access</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div>
+        <section class="sec-info">
+          <h2>How it Works:</h2>
+          <div class="info-box box-gradient-1">
+            <fieldset>
+              <legend>
+                <span class="">
+                  <h3 class="text-gradient-1">
+                    <span class="">Own</span> Your Audience
+                  </h3>
+                  <!-- <h3 aria-hidden="true" class="text-gradient-1 scroll-text">Own Your Audience</h3> -->
+                  <!-- <h3 aria-hidden="true" class="text-gradient-1 scroll-text">Own Your Audience</h3>
+                            <h3 aria-hidden="true" class="text-gradient-1 scroll-text">Own Your Audience</h3> -->
+                </span>
+              </legend>
+              <img src="./img/audience-icon.svg" alt="" />
+              <p>
+                Directly message fans anytime, anywhere 4x more effectively.
+              </p>
+            </fieldset>
+          </div>
+          <div class="info-box box-gradient-2">
+            <fieldset>
+              <legend>
+                <span class="">
+                  <h3 class="text-gradient-2">
+                    Genuine, Deeper <span>Engagement</span>
+                  </h3>
+                </span>
+              </legend>
+              <img src="./img/engagement-icon.svg" alt="" />
+              <p>Build a community with our playbooks and your content.</p>
+            </fieldset>
+          </div>
+          <div class="info-box box-gradient-3">
+            <fieldset>
+              <legend>
+                <span class="">
+                  <h3 class="text-gradient-3">
+                    <span>Monetize</span> in New Ways
+                  </h3>
+                </span>
+              </legend>
+              <img src="./img/monetize-icon.svg" alt="" />
+              <p>
+                Leverage revolutionary tools to get paid giving the fans what
+                they want.
+              </p>
+            </fieldset>
+          </div>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <!-- TODO: Connect Footer links to proper destinations -->
+        <p class="footer-links">
+          <span class="pl-3 pr-4"
+            ><a href="terms-and-conditions.html">Terms and Conditions</a></span
+          ><span class="pl-3 pr-4"
+            ><a href="/fanpad/privacy-policy.html">Privacy Policy</a></span
+          ><span class="pl-3 pr-4"
+            ><a
+              href="https://twitter.com/mhemani13/status/1481534826184429568?s=21 "
+              ><img src="./img/twitter.svg" width="26px" /></a
+          ></span>
+        </p>
+        <p class="footer-copyright">© FanPad 2022</p>
+      </footer>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
